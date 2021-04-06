@@ -1,0 +1,21 @@
+pkgbase = nodejs-lerna
+	pkgdesc = A tool that assists in managing JavaScript projects with multiple packages.
+	pkgver = 4.0.0
+	pkgrel = 1
+	url = https://lerna.org
+	changelog = CHANGELOG.md
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = jq
+	depends = nodejs
+	noextract = lerna-4.0.0.tgz
+	source = https://registry.npmjs.org/lerna/-/lerna-4.0.0.tgz
+	source = CHANGELOG.md
+	source = README.md
+	sha512sums = 0c3fe2d739eeadf3a63496f4381c3ae8d98daa233c905eae22bceb274c0613754d77378e873f738962d88916990c61b081b7233a8e9e21f731f4ee50ca7cfe92
+	sha512sums = 0514fafb7b8147c56186ebb471f0d2f40ea134ffa60b0450cd425ddb75ac8ca4cc94b71e6f67000164510a83ddbeaa002a73e6d6d61a5db677dcfcb6100cc1cd
+	sha512sums = 4250132299cc238781342d30d9b8658809b6935b49f689a8de772908a5c985de240aaaba6281d9e3c8fb0f02047d676d0f8276836bb1e4f7b5bf91db480b78dd
+
+pkgname = nodejs-lerna
+
