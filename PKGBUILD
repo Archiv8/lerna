@@ -1,3 +1,14 @@
+#!/bin/bash
+
+# Disable various shellcheck rules that produce false positives in this file.
+# Repository rules should be added to the .shellcheckrc file located in the
+# repository root directory, see https://github.com/koalaman/shellcheck/wiki
+# and https://archiv8.github.io for further information.
+# shellcheck disable=SC2034,SC2154
+# ToDo: Add files: User documentation
+# ToDo: Add files: Tooling
+# FixMe: Namcap warnings and errors
+
 # Maintainer: Ross Clark <archiv8@artisteducator.com>
 # Contributor: Ross Clark <archiv8@artisteducator.com>
 
@@ -26,17 +37,15 @@ makedepends=("npm" "jq")
 # backup=()
 # options=()
 # install=
-changelog="CHANGELOG.md"
+# changelog="CHANGELOG.md"
 source=(
 "$_repo/$_relname/-/$_relname-$pkgver.tgz"
-"CHANGELOG.md"
-"README.md"
+# "CHANGELOG.md"
+# "README.md"
 )
 noextract=("$_relname-$pkgver.tgz")
 # validpgpkeys=()
-sha512sums=('0c3fe2d739eeadf3a63496f4381c3ae8d98daa233c905eae22bceb274c0613754d77378e873f738962d88916990c61b081b7233a8e9e21f731f4ee50ca7cfe92'
-            '0514fafb7b8147c56186ebb471f0d2f40ea134ffa60b0450cd425ddb75ac8ca4cc94b71e6f67000164510a83ddbeaa002a73e6d6d61a5db677dcfcb6100cc1cd'
-            '4250132299cc238781342d30d9b8658809b6935b49f689a8de772908a5c985de240aaaba6281d9e3c8fb0f02047d676d0f8276836bb1e4f7b5bf91db480b78dd')
+sha512sums=('0c3fe2d739eeadf3a63496f4381c3ae8d98daa233c905eae22bceb274c0613754d77378e873f738962d88916990c61b081b7233a8e9e21f731f4ee50ca7cfe92')
 
 package() {
   # Ensure cache is set when install is run in order to avoid littering user's home directory
@@ -68,13 +77,13 @@ mv "$tmppackage" "$pkgjson"
 chmod 644 "$pkgjson"
 
 # Install license
-install -dm755 "${pkgdir}/usr/share/licenses/${pkgname}"
-ln -s ../../../lib/node_modules/eslint/LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+# install -dm755 "${pkgdir}/usr/share/licenses/${pkgname}"
+# ln -s ../../../lib/node_modules/eslint/LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 
 # Create Archiv8 documentation folder
-install -dvm 755 "$pkgdir/usr/share/doc/$pkgname/packaging/"
+# install -dvm 755 "$pkgdir/usr/share/doc/$pkgname/packaging/"
 
 # Install Archiv8 Documentation
-install -Dm 644 "CHANGELOG.md" "$pkgdir/usr/share/doc/$pkgname/packaging/CHANGELOG.md"
-install -Dm 644 "README.md" "$pkgdir/usr/share/doc/$pkgname/packaging/README.md"
+# install -Dm 644 "CHANGELOG.md" "$pkgdir/usr/share/doc/$pkgname/packaging/CHANGELOG.md"
+# install -Dm 644 "README.md" "$pkgdir/usr/share/doc/$pkgname/packaging/README.md"
 }
