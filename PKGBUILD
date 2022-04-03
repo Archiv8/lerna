@@ -7,6 +7,8 @@
 # shellcheck disable=SC2034,SC2154
 # ToDo: Add files: User documentation
 # ToDo: Add files: Tooling
+# ToDo: Ensure license is installed
+# ToDo: Ensure name change from nodejs-lerna to just lerna works
 # FixMe: Namcap warnings and errors
 
 # Maintainer: Ross Clark <archiv8@artisteducator.com>
@@ -18,9 +20,9 @@ _repo="https://registry.npmjs.org"
 
 
 # pkgbase=
-pkgname="${_langname}-${_relname}"
+pkgname="${_relname}"
 pkgver=4.0.0
-pkgrel=1
+pkgrel=2
 #epoch=
 pkgdesc="A tool that assists in managing JavaScript projects with multiple packages."
 arch=("any")
@@ -31,9 +33,9 @@ depends=("nodejs")
 # optdepends=()
 makedepends=("npm" "jq")
 # checkdepends=()
-# provides=()
-# conflicts=()
-# replaces=()
+provides=("nodejs-lerna")
+conflicts=("nodejs-lerna")
+replaces=("nodejs-lerna")
 # backup=()
 # options=()
 # install=
