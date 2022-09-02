@@ -21,8 +21,8 @@ _repo="https://registry.npmjs.org"
 
 # pkgbase=
 pkgname="${_relname}"
-pkgver=4.0.0
-pkgrel=2
+pkgver=5.1.6
+pkgrel=1
 #epoch=
 pkgdesc="A tool that assists in managing JavaScript projects with multiple packages."
 arch=("any")
@@ -47,7 +47,7 @@ source=(
 )
 noextract=("$_relname-$pkgver.tgz")
 # validpgpkeys=()
-sha512sums=('0c3fe2d739eeadf3a63496f4381c3ae8d98daa233c905eae22bceb274c0613754d77378e873f738962d88916990c61b081b7233a8e9e21f731f4ee50ca7cfe92')
+sha512sums=('7a22e3dc8bab6c46acd6b1ad9ed5b809fdbfeb2f743adda841a536c2fe2ea36ac77fa1915d40446749eb138cac78394db6c4bf1fb6ea7ebbe50186f73d6506d4')
 
 package() {
   # Ensure cache is set when install is run in order to avoid littering user's home directory
